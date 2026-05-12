@@ -8,5 +8,6 @@ import java.util.UUID;
 
 public interface ContaRepository extends JpaRepository<Conta, UUID> {
     Optional<Conta> findByUsuarioId(UUID usuarioId);
+    Optional<Conta> findByNumeroConta(String numeroConta);
     boolean existsByNumeroConta(String numeroConta);
 }
